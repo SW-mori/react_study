@@ -1,9 +1,13 @@
 import './css/App.css';
-import Button from './components/button'
+import Title from './components/title';
+import Button from './components/button';
 
 const Counter = () => {
   return (
-    <Button/>
+    <div className="App">
+      <Title/>
+      <Button/>
+    </div>
   )
 }
 export default Counter;
