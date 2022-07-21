@@ -14,7 +14,7 @@ const Counter = () => {
       <Title/>
       <button onClick={toggle}>{open ? 'close' : 'open'}</button>
       <div className={open ? 'isOpen' : 'isClose'}>
-        <Button/>
+        <Button click={'increment'}/>
       </div>
     </div>
   )
