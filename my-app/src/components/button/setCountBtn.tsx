@@ -7,16 +7,29 @@ const Button = (click: any) => {
 
   let text = ''
 
+  let value
+
   if (click.click === 'increment') {
     text = '+ 1'
+    value = () => {
+      setCount(prevState => prevState + 1)
+    }
   }  else if (click.click === 'decrement') {
     text = '- 1'
+    value = () => {
+      setCount(count - 1)
+    } 
+  } else {
+    text = 'reset'
+    value = () => {
+      setCount(0)
+    }
   }
   
   return (
     <>
       <p>現在の数字は{count}です</p>
-      <button onClick={() => setCount(prevState => prevState + 1)}>{text}</button>
+      <button onClick={value}>{text}</button>
     </>
   )
 }

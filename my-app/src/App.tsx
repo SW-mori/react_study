@@ -16,6 +16,7 @@ const Counter = () => {
       <div className={open ? 'isOpen' : 'isClose'}>
         <Button click={'increment'}/>
         <Button click={'decrement'}/>
+        <Button click={'reset'}/>
       </div>
     </div>
   )
