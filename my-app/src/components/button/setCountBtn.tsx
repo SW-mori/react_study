@@ -5,7 +5,7 @@ const Button = (click: any) => {
   // countという名前のstate変数を宣言、初期値0をセット
   const [count, setCount] = useState(0)
 
-  let text = ''
+  let text: string
 
   let value
 
