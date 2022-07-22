@@ -22,7 +22,6 @@ const Button = (click: any) => {
   
   return (
     <>
-      <p>現在の数字は{count}です</p>
       <button onClick={value}>{text}</button>
     </>
   )
