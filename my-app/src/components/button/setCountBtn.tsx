@@ -1,9 +1,9 @@
-const Button = (text: any, value: any) => {
+const Button = (props: any) => {
 
-  
+  console.log(props)
   return (
     <>
-      <button onClick={value.value}>{text.text}</button>
+      <button onClick={props.value}>{props.text}</button>
     </>
   )
 }

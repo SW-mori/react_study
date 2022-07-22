@@ -11,14 +11,29 @@ const Counter = () => {
   // countという名前のstate変数を宣言、初期値0をセット
   const [count, setCount] = useState(0)
 
-  let text: string
+  // let text: string
 
-  let value
+  // let value
   
   const addCount = () => {
     setCount(prevState => prevState + 1)
   }
   
+  const minusCount = () => {
+    setCount(count - 1)
+  }
+
+  const data = {
+    add: {
+      text: '+ 1',
+      value: addCount
+    },
+    minus: {
+      text: '- 1',
+      value: minusCount
+    }
+  }
+
   // if (click.click === 'increment') {
   //   text = '+ 1'
   //   value = () => setCount(prevState => prevState + 1)
@@ -36,8 +51,8 @@ const Counter = () => {
       <button onClick={toggle}>{open ? 'close' : 'open'}</button>
       <div className={open ? 'isOpen' : 'isClose'}>
         <p>現在の数字は{count}です</p>
-        <button onClick={addCount}>+ 1</button>
-        <Button text={'- 1'} value={addCount}/>
+        <Button key={data.add}/>
+        <Button key={data.minus}/>
       </div>
     </div>
   )
