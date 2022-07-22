@@ -11,19 +11,13 @@ const Button = (click: any) => {
 
   if (click.click === 'increment') {
     text = '+ 1'
-    value = () => {
-      setCount(prevState => prevState + 1)
-    }
+    value = () => setCount(prevState => prevState + 1)
   }  else if (click.click === 'decrement') {
     text = '- 1'
-    value = () => {
-      setCount(count - 1)
-    } 
+    value = () => setCount(count - 1)
   } else {
     text = 'reset'
-    value = () => {
-      setCount(0)
-    }
+    value = () => setCount(0)
   }
   
   return (
