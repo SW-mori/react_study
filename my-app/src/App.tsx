@@ -11,10 +11,6 @@ const Counter = () => {
   // countという名前のstate変数を宣言、初期値0をセット
   const [count, setCount] = useState(0)
 
-  // let text: string
-
-  // let value
-  
   const addCount = () => {
     setCount(prevState => prevState + 1)
   }
@@ -41,17 +37,6 @@ const Counter = () => {
       value: counterReset
     }
   }
-
-  // if (click.click === 'increment') {
-  //   text = '+ 1'
-  //   value = () => setCount(prevState => prevState + 1)
-  // }  else if (click.click === 'decrement') {
-  //   text = '- 1'
-  //   value = () => setCount(count - 1)
-  // } else {
-  //   text = 'reset'
-  //   value = () => setCount(0)
-  // }
 
   return (
     <div className="App">
