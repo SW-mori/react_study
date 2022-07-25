@@ -23,6 +23,10 @@ const Counter = () => {
     setCount(count - 1)
   }
 
+  const counterReset = () => {
+    setCount(0)
+  }
+
   const data = {
     add: {
       text: '+ 1',
@@ -31,6 +35,10 @@ const Counter = () => {
     minus: {
       text: '- 1',
       value: minusCount
+    },
+    reset: {
+      text: 'reset',
+      value: counterReset
     }
   }
 
@@ -51,8 +59,9 @@ const Counter = () => {
       <button onClick={toggle}>{open ? 'close' : 'open'}</button>
       <div className={open ? 'isOpen' : 'isClose'}>
         <p>現在の数字は{count}です</p>
-        <Button key={data.add}/>
-        <Button key={data.minus}/>
+        <Button data={data.add}/>
+        <Button data={data.minus}/>
+        <Button data={data.reset}/>
       </div>
     </div>
   )
