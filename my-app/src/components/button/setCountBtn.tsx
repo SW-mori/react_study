@@ -1,9 +1,8 @@
 const Button = (props: any) => {
 
-  console.log(props)
   return (
     <>
-      <button onClick={props.value}>{props.text}</button>
+      <button onClick={props.data.value}>{props.data.text}</button>
     </>
   )
 }
