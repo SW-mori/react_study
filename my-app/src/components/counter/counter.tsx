@@ -1,5 +1,5 @@
 import '../../css/counter.css';
-import Button from '../../components/button/setCountBtn';
+import { CountButton } from '../../components/button/setCountBtn';
 import { useState } from 'react';
 
 const Counter = () => {
@@ -50,12 +50,12 @@ const Counter = () => {
       <button onClick={toggle}>{open ? 'close' : 'open'}</button>
       <div className={open ? 'isOpen' : 'isClose'}>
         <p>現在の数字は{count}です</p>
-        <Button data={data.add}/>
-        <Button data={data.minus}/>
-        <Button data={data.reset}/>
+        <CountButton data={data.add}/>
+        <CountButton data={data.minus}/>
+        <CountButton data={data.reset}/>
       </div>
     </>
   )
 }
 
-export default Counter;
+export { Counter as CounterFunc };
