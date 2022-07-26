@@ -1,4 +1,4 @@
-const Button = (props: any) => {
+export const Button = (props: any) => {
 
   return (
     <>
@@ -6,5 +6,3 @@ const Button = (props: any) => {
     </>
   )
 }
-
-export { Button as CountButton };
