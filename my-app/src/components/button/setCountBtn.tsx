@@ -7,4 +7,4 @@ const Button = (props: any) => {
   )
 }
 
-export default Button;
+export { Button as CountButton };
