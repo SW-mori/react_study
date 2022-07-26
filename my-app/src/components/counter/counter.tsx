@@ -1,8 +1,8 @@
 import '../../css/counter.css';
-import { CountButton } from '../../components/button/setCountBtn';
+import { Button } from '../../components/button/setCountBtn';
 import { useState } from 'react';
 
-const Counter = () => {
+export const Counter = () => {
   
   // open という名前の state 変数を宣言、初期値 true をセット
   const [open, setOpen] = useState(true)
@@ -50,12 +50,10 @@ const Counter = () => {
       <button onClick={toggle}>{open ? 'close' : 'open'}</button>
       <div className={open ? 'isOpen' : 'isClose'}>
         <p>現在の数字は{count}です</p>
-        <CountButton data={data.add}/>
-        <CountButton data={data.minus}/>
-        <CountButton data={data.reset}/>
+        <Button data={data.add}/>
+        <Button data={data.minus}/>
+        <Button data={data.reset}/>
       </div>
     </>
   )
 }
-
-export { Counter as CounterFunc };
