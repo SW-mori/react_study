@@ -1,15 +1,15 @@
 import './css/App.css';
-import Title from './components/title';
-import Counter from './components/counter/counter';
+import { CounterTitle } from './components/title';
+import { CounterFunc } from './components/counter/counter';
 
 const App = () => {
 
   return (
     <div className="App">
-      <Title/>
-      <Counter/>
+      <CounterTitle/>
+      <CounterFunc/>
     </div>
   )
 }
 
-export default App;
+export { App as CounterApp };
