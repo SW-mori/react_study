@@ -1,8 +1,8 @@
 import './css/App.css';
-import Title from './components/title';
-import Counter from './components/counter/counter';
+import { Title } from './components/title';
+import { Counter } from './components/counter/counter';
 
-const App = () => {
+export const App = () => {
 
   return (
     <div className="App">
@@ -11,5 +11,3 @@ const App = () => {
     </div>
   )
 }
-
-export default App;

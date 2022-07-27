@@ -1,8 +1,8 @@
 import '../../css/counter.css';
-import Button from '../../components/button/setCountBtn';
+import { Button } from '../../components/button/setCountBtn';
 import { useState } from 'react';
 
-const Counter = () => {
+export const Counter = () => {
   
   // open という名前の state 変数を宣言、初期値 true をセット
   const [open, setOpen] = useState(true)
@@ -57,5 +57,3 @@ const Counter = () => {
     </>
   )
 }
-
-export default Counter;
