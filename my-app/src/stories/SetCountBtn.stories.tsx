@@ -15,17 +15,15 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const CountUp = Template.bind({});
 CountUp.args = {
-  primary: true,
-  label: '+ 1',
+  text: '+ 1',
 };
 
 export const CountDown = Template.bind({});
 CountDown.args = {
-  label: '- 1',
+  text: '- 1',
 };
 
 export const Reset = Template.bind({});
 Reset.args = {
-  size: 'large',
-  label: 'reset',
+  text: 'reset',
 };
