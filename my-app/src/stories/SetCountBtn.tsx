@@ -1,16 +1,10 @@
 import React from 'react';
 import './setCountBtn.css';
 
-interface ButtonProps {
-  text: string
-  value: () => void;
-}
-
-export const Button = ({
-  text, 
-  value
-}: ButtonProps) => {
+export const Button = (props: any) => {
   return (
-    <button type="button" onClick={value}>{text}</button>
+    <>
+      <button type="button" onClick={props.data.value}>{props.data.text}</button>
+    </>
   );
 };
